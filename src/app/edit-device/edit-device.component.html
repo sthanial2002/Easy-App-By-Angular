@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row ">
+        <h2 class="page-title text-center">Formulaire de creation d'un nouvel appareil | Methode Template</h2>
+        <div class="col-md-8 col-md-offset-2 jumbotron">
+      
+            <form (ngSubmit) = "onSubmit(f)" #f="ngForm">
+
+                    <div class="form-group">
+                      <label for="name">Nom de l'appareil</label>
+                      <input [(ngModel)]="name" name="name" type="text" class="form-control" id="name" placeholder="Nom de l'appareil" required>
+                    </div>
+                
+                    <div class="form-group">
+                      <label for="status">Etat de l'appareil</label>
+                      <select [(ngModel)]="defaultOnOff" name="status" class="form-control" id="status" required>
+                        <option value="ON">ON</option>
+                        <option value="OFF">OFF</option>
+                      </select>
+                    </div>  
+                    <button [disabled]="!f.valid" type="submit" class="btn btn-success btn-block"> Ajouter </button>
+                </form>
+               
+        </div>       
+    </div>
+</div>
+
+

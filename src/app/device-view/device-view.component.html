@@ -1,0 +1,37 @@
+      <h1 class="page-header">Tableau de bord | Liste des appareils
+        </h1>
+        <h3 >Mise à jour le : {{lastUpdate |async|date:'short'}}</h3>
+        <flash-messages></flash-messages>
+    <ul *ngFor="let d of devices; let i = index">
+      <li>
+        <app-devicecomponent
+          [id] = 'd.id'
+          [deviceName] = 'd.name'
+          [deviceStatus] = 'd.status'
+          [indexOfDevice] = 'i'>
+        </app-devicecomponent>
+      </li>
+    </ul>
+
+    <div class="col-md-4">
+    <p>
+        <button (click) = "onSave()"
+        
+                type="button" class="btn btn-large btn-block btn-outline-light"> Sauvegarder sur le backend Firebase</button>
+        </p>
+</div>
+      <div class="col-md-4">
+          <p>
+              <button (click) = "onAllLightUp()"
+              [disabled]="isOnOff"
+                      type="button" class="btn btn-large btn-block btn-success"> Tout Allumer</button>
+              </p>
+      </div>
+      <div class="col-md-4">
+          <p>
+              <button (click) = "onAllLightDown()"
+                      [disabled]="!isOnOff" 
+                      type="button" class="btn btn-large btn-block btn-danger" >Tout Eteindre</button>
+              </p>
+      </div>
+

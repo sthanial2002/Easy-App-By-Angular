@@ -1,0 +1,46 @@
+<div class="container">
+  <h2 style="text-align:center">Authentification</h2>
+  <div class="row">
+    <button (click)="onSignIn()" *ngIf="!authStatus" type="button" class="btn btn-large btn-block btn-primary">Se
+      connecter</button>
+
+
+    <button (click)="onSignOut()" *ngIf="authStatus" type="button"
+      class="btn btn-large btn-block btn-danger">Déconnexion</button>
+  </div>
+</div>
+
+
+
+<!--
+
+<div class="forms">
+    <ul class="tab-group">
+      <li class="tab active"><a href="#login">Connexion</a></li>
+      <li class="tab"><a href="#signup">Inscription</a></li>
+    </ul>
+    <form action="#" id="login">
+          <h1>Se connecter</h1>
+          <div class="input-field">
+            <label for="email">Adresse de messagerie</label>
+            <input type="email" name="email" required="email" />
+            <label for="password">Mot de passe</label> 
+            <input type="password" name="password" required/>
+            <input type="submit" value="Connexion" class="button"/>
+            <p class="text-p"> <a href="#">Mot de passe oublié ?</a> </p>
+          </div>
+      </form>
+      <form action="#" id="signup">
+          <h1>Créer un compte</h1>
+          <div class="input-field">
+            <label for="email">Adresse de messagerie</label> 
+            <input type="email" name="email" required="email"/>
+            <label for="password">Mot de passe</label> 
+            <input type="password" name="password" required/>
+            <label for="password">Confirmer Mot de passe</label> 
+            <input type="password" name="password" required/>
+            <input (click) = "onSignIn()"                 type="submit"                         value="Inscription"                   class="button" />
+          </div>
+      </form>
+</div>
+-->

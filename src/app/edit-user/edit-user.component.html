@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row ">
+      <h2 class="page-title text-center">Formulaire de creation d'un nouvel utilisateur | Methode Reactive</h2>
+      <div class="col-md-8 col-md-offset-2 jumbotron">
+    
+          <form (ngSubmit) = "onSubmitform()" [formGroup]="userForm">
+
+                  <div class="form-group">
+                    <label for="firstname">Prénom</label>
+                    <input formControlName="firstname" type="text" class="form-control" id="firstname" placeholder="Prénoms" >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="lastname">Prénom</label>
+                    <input formControlName="lastname" type="text" class="form-control" id="lastname" placeholder="Nom" >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Adresse de messagerie</label>
+                    <input formControlName="email" type="email" class="form-control" id="email" placeholder="Adresse de messagerie" >
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="drinkPreference">Quelle boisson préfériez-vous ?</label>
+                    <select formControlName="drinkPreference" class="form-control" id="drinkPreference" >
+                      <option value="Coca">Coca</option>
+                      <option value="Pepsi">Pepsi</option>
+                    </select>
+                  </div>  
+
+                  <div formArrayName="hobbies">
+                    <h4>Vos hobbies</h4>
+                    <div class="form-group" *ngFor="let hobbyControl of getHobbies().controls; let i = index">
+                      <input [formControlName]="i" type="text" class="form-control"  placeholder="Vos hobbies" >
+                    </div>
+                    <button (click)="onAddHobbies()" type="button" class="btn btn-primary "> Ajouter un hobby </button><br><br>
+                  </div>
+                  
+                  <button [disabled]="!userForm.valid" type="submit" class="btn btn-success btn-block"> Ajouter </button>
+              </form>
+             
+      </div>       
+  </div>
+</div>
+
+

@@ -1,0 +1,50 @@
+<div class="row jumbotron">
+  <div class="col-md-10">
+    <div [ngClass]="(deviceStatus === 'OFF') ? 'panel panel-danger' : 'panel panel-success'">
+      <div class="panel-heading">Appareil : {{deviceName}} </div>
+      <div class="panel-body">
+        <div style="margin-bottom: 1em">
+            <b>Statut Appareil </b>  : 
+            <span class="status1" 
+                  *ngIf="deviceStatus === 'OFF'"> </span>
+            <span class="status2" 
+                  *ngIf="deviceStatus === 'ON'"> </span>  
+            ( <b [ngStyle]="{color: color()}"> {{ getStatus() }}</b> )
+        </div>
+        
+        <div class="form-group">
+            <input 
+            [(ngModel)] = "deviceName" 
+            class="form-control" type="text" name="deviceName" id="">
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><p><a [routerLink]="[id]" class="btn btn-primary" style="margin-left: -6em;margin-bottom: -3em" >Détails </a></p></li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <p>
+    <button (click) = "oneLightUp()"
+            [disabled] = "deviceStatus === 'ON'"
+            type="button" 
+            class="btn btn-large btn-block btn-success">Allumer</button>
+    </p>
+  </div>
+  <div class="col-md-2">
+    <p>
+    <button (click) = "oneLightDown()"
+            [disabled] = "deviceStatus === 'OFF'"
+            type="button" class="btn btn-large btn-block btn-danger" 
+            style="margin-top: 8.3em">Eteindre</button>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+

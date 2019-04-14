@@ -1,0 +1,24 @@
+<div class="row jumbotron" *ngFor="let user of users">
+  <div class="col-md-10">
+    <div class="panel panel-success">
+      <div class="panel-heading"> {{user.firstname}} {{user.lastname}} </div>
+      <div class="panel-body">
+        <div style="margin-bottom: 1em">
+            Adresse de messagerie  : <b>{{user.email}}</b> <br>
+            {{user.firstname}} préfère le <b>{{user.drinkPreference}}</b> <br>
+            <span *ngIf="user.hobbies && user.hobbies.length > 0">
+              {{user.firstname}}  a des hobbies à savoir : 
+              <b *ngFor="let hobby of user.hobbies">{{hobby}} -  </b>
+            </span>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><p><a [routerLink]="[id]" class="btn btn-primary" style="margin-right: 1em;margin-bottom: -3em"  >Détails </a></p></li>
+          <li><p><a routerLink="" class="btn btn-success" style="margin-right: 1em;margin-bottom: -3em" >Modifier </a></p></li>
+          <li><p><a routerLink=""  class="btn btn-danger" style="margin-right: 1em;margin-bottom: -3em"     >Supprimer </a></p></li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+ 
+</div>
