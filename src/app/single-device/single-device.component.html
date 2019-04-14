@@ -1,21 +1,21 @@
 <div class="row jumbotron" style="margin-top: 20px">
     <div class="col-md-12">
-      <div [ngClass]="(statusDevice === 'OFF') ? 'panel panel-danger' : 'panel panel-success'">
+      <div [ngClass]="(status === 'OFF') ? 'panel panel-danger' : 'panel panel-success'">
         <div class="panel-heading">Appareil : {{name}} </div>
         <div class="panel-body">
           <div style="margin-bottom: 1em">
               <b>Statut Appareil</b>  : 
               <span class="status1" 
-                  *ngIf="deviceStatus === 'OFF'"> </span>
+                  *ngIf="status === 'OFF'"> </span>
             <span class="status2" 
-                  *ngIf="deviceStatus === 'ON'"> </span> 
+                  *ngIf="status === 'ON'"> </span> 
               ( <b [ngStyle]="{color: getColorDevice()}" >  {{ status }}</b> )
           </div>
           
           <div class="form-group">
               <input 
-              [(ngModel)] = "nameDevice" 
-              class="form-control" type="text" name="nameDevice" id="">
+              [(ngModel)] = "name" 
+              class="form-control" type="text" name="name" id="">
           </div>
 
         </div>
