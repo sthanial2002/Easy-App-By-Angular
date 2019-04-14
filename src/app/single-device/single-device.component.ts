@@ -8,20 +8,20 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./single-device.component.css']
 })
 export class SingleDeviceComponent implements OnInit {
-  nameDevice: string;
-  statusDevice: string;
+  name = 'device';
+  status = 'statut';
 
   constructor(private deviceService: DeviceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     const id = this.route.snapshot.params['id'];
 
-    this.nameDevice = this.deviceService.getDeviceById(+id).name;
-    this.statusDevice = this.deviceService.getDeviceById(+id).status;
+    this.name = this.deviceService.getDeviceById(+id).name;
+    this.status = this.deviceService.getDeviceById(+id).status;
   }
 
   getColorDevice () {
-    if (this.statusDevice === 'ON') {
+    if (this.status === 'ON') {
       return 'green' ;
     } else {
       return 'darkred';
