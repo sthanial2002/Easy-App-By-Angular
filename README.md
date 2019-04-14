@@ -7,7 +7,6 @@
         <p class="alert alert-warning">
             <strong><p> Un exemple de l'application démo est <a href="https://easyapp-by-angular.herokuapp.com/"> Ici </a></p></strong>
         </p>
-    
     </div>
 </div>
 
