@@ -1,7 +1,30 @@
-# V7
+<div class="container wrapper">
+        
+  <h3>Tutoriel Angular 7.0.6 | Simulation  de gestion des appareils electroménagers</h3>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+  <div class="row">
+    <div class="col-md-10 text-center">
+        <p class="alert alert-warning">
+            <strong><p> Un exemple de l'application démo est <a href="https://easyapp-by-angular.herokuapp.com/"> Ici </a></p></strong>
+        </p>
+    
+    </div>
+</div>
 
+  <hr>
+
+
+  <h3>Outils ayant servis au développement et au déploiement de cette application :</h3>
+
+  <ul>
+      <li>Angular 7.0.6</li>
+      <li>Bootstrap 3</li>
+      <li>Firebase Database</li>
+      <li>Github</li>
+      <li>Heroku</li>
+  </ul>
+  
+</div>
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
