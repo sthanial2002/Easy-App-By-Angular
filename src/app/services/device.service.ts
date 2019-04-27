@@ -9,10 +9,17 @@ export class DeviceService {
 
   deviceSubject = new Subject<any[]>();
 
-  private devices: any[] = [];
+  private devices: any[] = [
+    { id: 1, name: 'Télévision', status: 'ON' },
+    { id: 1, name: 'Réfrigerateur', status: 'OFF' },
+    { id: 1, name: 'Décodeur', status: 'ON' },
+    { id: 1, name: 'DVD', status: 'OFF' },
+    { id: 1, name: 'Ordinateur', status: 'ON' },
+    { id: 1, name: 'Imprimante', status: 'ON' }
+  ];
 
   constructor(private httpClient: HttpClient) {
-      this.devices = this.getDevicesFromServer();
+  //    this.devices = this.getDevicesFromServer();
   }
 
   getDevicesFromServer() {

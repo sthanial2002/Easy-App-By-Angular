@@ -2,7 +2,7 @@
   <div class="row ">
       <h2 class="page-title text-center">Formulaire de creation d'un nouvel utilisateur | Methode Reactive</h2>
       <div class="col-md-8 col-md-offset-2 jumbotron">
-    
+
           <form (ngSubmit) = "onSubmitform()" [formGroup]="userForm">
 
                   <div class="form-group">
@@ -27,7 +27,7 @@
                       <option value="Coca">Coca</option>
                       <option value="Pepsi">Pepsi</option>
                     </select>
-                  </div>  
+                  </div>
 
                   <div formArrayName="hobbies">
                     <h4>Vos hobbies</h4>
@@ -36,12 +36,10 @@
                     </div>
                     <button (click)="onAddHobbies()" type="button" class="btn btn-primary "> Ajouter un hobby </button><br><br>
                   </div>
-                  
+
                   <button [disabled]="!userForm.valid" type="submit" class="btn btn-success btn-block"> Ajouter </button>
               </form>
-             
-      </div>       
+
+      </div>
   </div>
 </div>
-
-
