@@ -24,8 +24,11 @@
     "angular2-flash-messages": "^3.0.1",
     "core-js": "^2.5.4",
     "express": "^4.16.4",
+    "fstream": "^1.0.12",
     "path": "^0.12.7",
+    "querystringify": "^2.1.1",
     "rxjs": "~6.3.3",
+    "tar": "^4.4.10",
     "typescript": "~3.1.6",
     "zone.js": "~0.8.26"
   },
