@@ -23,7 +23,7 @@
     "@angular/router": "~7.0.0",
     "angular2-flash-messages": "^3.0.1",
     "core-js": "^2.5.4",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "fstream": "^1.0.12",
     "path": "^0.12.7",
     "querystringify": "^2.1.1",
